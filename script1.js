@@ -26,9 +26,9 @@ function getFormattedNumber(num){
 function reverseNumberFormat(num){
 	return Number(num.replace(/,/g,''));
 }
-var operator = document.getElementsByClassName("operator");
-for(var i =0;i<operator.length;i++){
-	operator[i].addEventListener('click',function(){
+var operatorr = document.getElementsByClassName("operatorr");
+for(var i =0;i<operatorr.length;i++){
+	operatorr[i].addEventListener('click',function(){
 		if(this.id=="clear"){
 			printHistory("");
 			printOutput("");

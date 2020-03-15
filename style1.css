@@ -2,23 +2,28 @@ body{
 	font-family: 'Open Sans',sans-serif;
 	background-color: black;
 }
-#container{
-	width: 1000px;
-	height: 550px;
-	margin: 20px auto;	
+#container{	
 }
 #calculator{
-	width: 320px;
-	height: 520px;
 	background-color: #eaedef;
 	margin: 0 auto;
-	top: 20px;
-	position: relative;
-	border-radius: 5px;
+	
+	position: absolute;
+			top:0;
+			left:0;
+			right: 0;
+			display: grid;
+			grid-gap: 20px;
+			grid-template-rows: 1fr 2fr;
+			height: 100%;
 }
 #result{
-	height: 120px;
+			display: flex;
+			flex-flow: column;
+
+			border-bottom: 0.1vw dotted;
 }
+
 #history{
 	text-align: right;
 	height: 20px;
@@ -31,22 +36,31 @@ body{
 	text-align: right;
 	height: 60px;
 	margin: 10px 20px;
-	font-size: 30px;
+	font-size: 50px;
 }
 #keyboard{
-	height: 400px;
 	color: #181818;
+	
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
-.operator, .number, .empty{
+.operatorr{
 	width:50px;
 	height: 50px;
-	margin: 15px;
+}
+.operatorr, .operator, .number, .empty{
+	
 	float: left;
 	border-radius: 50%;
 	border-width: 0;
-	font-weight: bold;
-	font-size: 15px;
+	font-size: 3.2vmax;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	
 }
+
 .number, .empty{
 	background-color: #eaedef;
 }
